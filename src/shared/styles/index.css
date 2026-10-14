@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+/* Design tokens — change a color or font here and it updates everywhere.
+   Each --color-x becomes Tailwind classes like bg-x, text-x, border-x. */
+@theme {
+  --color-primary: #0ea5e9;
+  --color-primary-light: #38bdf8;
+  --color-primary-dark: #0369a1; /* readable on white: link text, button backgrounds */
+  --color-tint: #e0f2fe;
+  --color-tint-soft: #f0f9ff;
+  --color-background: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+
+  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    /* Keeps section headings from hiding under the sticky navbar */
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-background font-sans text-ink antialiased;
+  }
+
+  /* Same clear focus ring on every link and button, for keyboard users only */
+  :focus-visible {
+    @apply rounded outline-2 outline-offset-4 outline-primary-dark;
+  }
+}
