@@ -4,12 +4,15 @@ import Contact from './sections/contact/Contact';
 import Hero from './sections/hero/Hero';
 import Projects from './sections/projects/Projects';
 import Skills from './sections/skills/Skills';
-import { a11y } from './shared/data/data';
+import { a11y, wakeUpUrls } from './shared/data/data';
 import Footer from './shared/components/Footer';
 import Navbar from './shared/components/Navbar';
 import ScrollProgressBar from './shared/components/ScrollProgressBar';
+import { useWakeBackends } from './shared/hooks/useWakeBackends';
 
 function App() {
+  useWakeBackends(wakeUpUrls);
+
   return (
     // reducedMotion="user": Framer Motion skips movement animations
     // for visitors who turned on "reduce motion" in their system settings

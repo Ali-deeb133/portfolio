@@ -188,6 +188,13 @@ export const projects = {
   note: 'Live demos are hosted on a free tier and may take ~30 seconds to wake up.',
 };
 
+// Free-tier backends pinged silently on page load so live demos wake up faster.
+export const wakeUpUrls: string[] = [
+  'https://skincare-backend-2str.onrender.com',
+  'https://lifestyle-backend-05r7.onrender.com',
+  'https://urban-safety-platform-backend.onrender.com',
+];
+
 export const contact = {
   heading: 'Contact',
   text: 'Open to job opportunities and relocation to Germany. Feel free to reach out.',
