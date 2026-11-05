@@ -131,7 +131,7 @@ export const skills = {
         { name: 'Git', icon: SiGit },
         { name: 'GitHub', icon: SiGithub },
         { name: 'Render', icon: SiRender },
-        { name: 'AWS', icon: FaAws, note: 'learning' },
+        
       ],
     },
   ] satisfies SkillGroup[],
